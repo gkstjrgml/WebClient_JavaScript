@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	window.onload = function(){
+		let out ="";
+		out += "<ul>";
+			out += "<li>javascript</li>";
+			out += "<li>jquery</li>";
+			out += "<li>vue</li>";
+		out += "</ul>";
+		
+		document.body.innerHTML = out;
+		
+		let header = document.createElement("h1");
+		//<h1></h1>
+		
+		let textnode = document.createTextNode("HELLO");
+		//HELLO
+		
+		header.appendChild(textnode);
+		//<h1>HELLO</h1>
+		
+		document.body.appendChild(header);
+		
+		//img 태그 동적 생성하고 src 속성도 추가 body 자식으로 append
+		let img = document.createElement("img");
+		img.setAttribute("src", "images/2.jpg");
+		img.setAttribute("width", "200");
+		img.setAttribute("height","200");
+		document.body.appendChild(img);
+	}
+	
+	</script>
+</head>
+<body>
+	해위이
+</body>
+</html>

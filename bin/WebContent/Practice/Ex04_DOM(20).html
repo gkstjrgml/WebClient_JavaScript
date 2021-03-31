@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		.democlass{color : silver;}
+	</style>
+</head>
+<body>
+	<div id="div">
+		<h1 class ="democlass">Hello World_1</h1>
+		<h1 class ="democlass">Hello World_2</h1>
+		<h1 class ="democlass">Hello World_3</h1>
+	</div>
+</body>
+<script type="text/javascript">
+	//document.getElementsByTagName("h1")[0].removeAttribute("class");
+	/*
+	let arr = document.getElementsByTagName("h1");
+	console.log(arr);
+	for(let i =0; i < arr.length; i++){
+		arr[i].removeAttribute("class");
+	}
+	*/
+	let arr = document.getElementsByTagName("h1");
+	for(let index in arr){
+		//console.log(arr[index]);
+		console.log("index: "+ index +"-length: "+arr.length);
+		console.log(index);
+	}
+	
+</script>
+</html>

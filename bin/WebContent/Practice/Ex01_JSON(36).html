@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	let product = {제품명:'딸기',년도: '2000', 원산지:'석희네집'};
+	
+	document.write(product);
+	document.write(product.제품명+"<br>");
+	document.write(product.년도+"<br>");
+	document.write(product.원산지+"<br>");
+	//document.write(product.toString()+"<br>");
+	
+	//{객체}
+	let person={name:"한석희",
+				addr:"서울시 송파구 잠실동",
+				eat: function(food){
+					document.write(this.name+"/"+food+"냠냠"+"/"+this.addr)
+				}
+			};
+	
+	document.write("<hr>");
+	person.eat("돼지갈비"); // 함수호출
+	
+	
+	//1.제거 기능
+	//let product = {제품명:'딸기',년도: '2000', 원산지:'석희네집'};
+	delete(product.제품명);
+	document.write("<br>");
+	document.write(product.년도);
+	
+	//for(let index in Array){}
+	for(let key in product){//key:변수명
+		console.log("key: "+key); //document.write("key:"+key);
+		console.log(product[key]);//key 값을 던져서 value값 받는다//document.write(product[key]);
+		
+	}
+	
+	for(let key in person){
+		console.log("key: "+key+"="+ person[key]);	
+	}
+	
+	//KEY POINT: 제공 받은 xml or json 객체를 원하는 데이터만 추출해서 화면에 출력
+	let Member ={}; // 빈 객체
+	Member.name ="han"; //{name: "han"}추가한거임
+	//document.write(Member);
+	document.write(Member.name);
+	
+	Member.age= 27;
+	Member.print = function(){
+		document.write("<br>"+this.name+"/"+this.age+"<br>")
+	}
+	Member.print();
+	document.write("<hr>");
+	
+	//POINT : 객체가 객체를 가질 수 있다, 객체가 배열을 가질 수 있다
+	//JAVA  : class Member{Car car; Arraylist list;}
+	
+	let Car={
+			list:{
+						"유모차": 1000000,
+						"벤츠"  : 70000000,
+						"비행기" : 10000000000 
+					},
+			show: function(){
+				for(let key in this.list){
+					document.write(key+" : "+this.list[key]+"<br>");
+				}
+			}
+	}
+	
+	Car.show();
+	document.write("<hr>");
+	
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

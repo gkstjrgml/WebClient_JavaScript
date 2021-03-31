@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul id = "mylist"><li>car</li><li>bus</li><li>metro</li></ul>
+	<button onclick = "myfunc()">눌러보셩</button>
+	<button onclick = "myfunc2()">눌러보랑께</button>
+</body>
+	<script type="text/javascript">
+		function myfunc(){
+			let list = document.getElementById("mylist");
+			console.log(list);
+			list.removeChild(list.childNodes[0]);
+		}
+		function myfunc2(){
+			let textnode = document.createTextNode("ship");
+			let item = document.getElementById("mylist").childNodes[0];
+			console.log(item);//<li>car</li>
+			console.log(item.childNodes[0]); //car
+			
+			item.replaceChild(textnode, item.childNodes[0]);
+			//car 를 water로...
+		}
+	
+	
+	
+	
+	</script>
+</html>
